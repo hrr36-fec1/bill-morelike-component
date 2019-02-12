@@ -1,2 +1,2 @@
 # bill-widget
-BetaCritic - clone of Metacritic - More like &lt;moviename> front end widget that shows related content.
+BetaCritic - clone of Metacritic - More Like *MovieName* front end widget that shows related content.

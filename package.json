@@ -1,0 +1,51 @@
+{
+  "name": "bill-morelike-component",
+  "version": "1.0.0",
+  "description": "Mimics the More Like <movie name> component on a Metacritic movie page to allow a user to choose a trailer video to watch.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server/server.js",
+    "wp-dev": "webpack -d --watch",
+    "build": "webpack --mode production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/billmortimer/bill-morelike-component.git"
+  },
+  "keywords": [
+    "fec"
+  ],
+  "author": "Bill Mortimer",
+  "license": "ISC",
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/billmortimer/bill-morelike-component/issues"
+  },
+  "homepage": "https://github.com/billmortimer/bill-morelike-component#readme",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "react-hot-loader": "^4.6.5",
+    "webpack": "^4.29.3",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.1.14",
+    "xlsx": "^0.14.1"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.3",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.11",
+    "nodemon": "^1.18.10",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1"
+  }
+}
