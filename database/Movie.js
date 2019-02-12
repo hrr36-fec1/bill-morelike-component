@@ -10,7 +10,7 @@ const movieSchema = new mongoose.Schema({
   year: String,
   imdb_id: String,
   mc_slug: String,
-  trailers: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Trailer' }],
+  trailers: Array,
 });
 
 const Movie = mongoose.model('Movie', movieSchema);
