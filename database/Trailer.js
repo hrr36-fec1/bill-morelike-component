@@ -9,7 +9,7 @@ const trailerSchema = new mongoose.Schema({
   thumb_url: String,
   trailer_url: String,
   duration: String,
-  watch_count: String,
+  watch_count: Number,
 });
 
 const Review = mongoose.model('Trailer', trailerSchema);
