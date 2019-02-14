@@ -1,18 +1,22 @@
 const mongoose = require('mongoose');
 const db = require('./index.js');
-const Trailer = require('./Trailer.js');  // Do I need this?
+//const Trailer = require('./Trailer.js');  
 
 mongoose.Promise = global.Promise;
 
 const movieSchema = new mongoose.Schema({
   id: { type: Number, index: { unique: true } },
   title: String,
-  year: String,
+  year: Number,
   imdb_id: String,
   mc_slug: String,
-  trailers: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Trailer' }],
+  trailers: Array,
+},
+{
+  timestamps: true
 });
 
 const Movie = mongoose.model('Movie', movieSchema);
 
 module.exports = Movie;
+
