@@ -1,4 +1,4 @@
-NOTE: This file is not actually used. Trailer objects are stored in an array on the movie object, so they are never loaded into mongo using this schema. However, this schema documents the structure and types of the objects in the trailers array for a movie.
+//NOTE: This file is not actually used. Trailer objects are stored in an array on the movie object, so they are never loaded into mongo using this schema. However, this schema documents the structure and types of the objects in the trailers array for a movie.
 
 const mongoose = require('mongoose');
 const db = require('./index.js');

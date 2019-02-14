@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const db = require('./index.js');
-const Trailer = require('./Trailer.js');  // Do I need this?
+//const Trailer = require('./Trailer.js');  
 
 mongoose.Promise = global.Promise;
 
