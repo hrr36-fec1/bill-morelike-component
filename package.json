@@ -8,7 +8,7 @@
     "wp-dev": "webpack -d --watch",
     "build": "webpack --mode production",
     "db:setup": "node utils/seed.js",
-    "lint" : "./node_modules/.bin/eslint \"**.*js*\"",
+    "lint": "./node_modules/.bin/eslint \"**.*js*\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
