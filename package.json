@@ -2,14 +2,14 @@
   "name": "bill-morelike-component",
   "version": "1.0.0",
   "description": "Mimics the More Like <movie name> component on a Metacritic movie page to allow a user to choose a trailer video to watch.",
-  "main": "index.js",
+  "main": "App.js",
   "scripts": {
     "start": "nodemon server/server.js",
     "wp-dev": "webpack -d --watch",
     "build": "webpack --mode production",
     "db:setup": "node utils/seed.js",
     "lint": "./node_modules/.bin/eslint \"**.*js*\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -41,6 +41,7 @@
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4",
+    "jest": "^24.1.0",
     "react-hot-loader": "^4.6.5",
     "webpack": "^4.29.3",
     "webpack-cli": "^3.2.3",
