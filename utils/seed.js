@@ -38,8 +38,6 @@ let trailerArrObj = trailerArray.reduce(function(acc, trailer) {
   return acc;
 },{});
 
-
-
 movieArray.map(function(movie) {
   // Map the populated trailer array onto each movieArray object, or an empty one if no trailers.
   if (trailerArrObj[movie.id]) {
@@ -49,13 +47,16 @@ movieArray.map(function(movie) {
   }
 });
 
-// Insert all the movie into the database
+//console.log(movieArray);
+
+// Insert all the movies into the database
 const insertMovies = function() {
   Movie.create(movieArray)
     .then(() => db.disconnect());
 };
 
-// Add drop collection here
+// drop the existing Movie database if it exists
+//Movie.collection.drop();
 
 insertMovies();
 console.log('movies inserted into mongoDB');

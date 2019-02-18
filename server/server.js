@@ -16,9 +16,9 @@ app.get('/', function(req, res) {
 });
 
 // Endpoint for requesting trailers for a particular movie
-// movieId is currently the movie id, but should be the mc_slug value sometime in the future
+// movieId is currently the mc_slug value 
 app.get('/api/movies/:movie_slug/trailers', (req, res) => {
-  Movies.find({ mc_slug: req.params.movie_slug }, 'trailers')
+  Movies.find({ mc_slug: req.params.movie_slug })
     .then(data => res.json(data));
 });
 
