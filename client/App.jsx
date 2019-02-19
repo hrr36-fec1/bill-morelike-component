@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import axios from 'axios';
 import TrailersList from './components/TrailersList.jsx';
 
 import movie1 from '../sampleData/sampleMovie.js';
@@ -12,6 +13,19 @@ class App extends React.Component {
     };
 
     // fetch default movie info and trailers and setState
+    this.getMovieData = this.getMovieData.bind(this);
+  }
+
+  componentDidMount() {
+    this.getMovieData()
+      .then((res) => {
+        let newMovie = res.data[0];
+        this.setState({ movie : newMovie });
+      });
+  }
+
+  getMovieData(movie_slug = 'jurassic-park') {
+    return axios.get(`/api/movies/${movie_slug}/trailers`)
   }
 
   render () {
@@ -38,23 +52,3 @@ class App extends React.Component {
 }
 
 ReactDOM.render(<App />, document.getElementById('app'));
-
-// removed: style="width:100%;" from div class fxdcol
-
-// <div>
-//   <div class="fxdcol gu12 pad_top1" style="width:100%;">
-//     <div class="trailers_strip pad_top1 pad_btm2 bump_section">
-//       <div class="title_bump pad_btm1">
-//         <div class="section_title bold">
-//           <div class="fl oswald">More From {this.state.movie.title}</div>
-//           <div class="see_all fwnorm fr"></div>
-//           <div class="clr"></div>
-//         </div>
-//       </div>
-
-//       <div class="marg_top1">
-//         <a class="see_all boxed oswald" href="/movie/the-godfather/trailers">SEE ALL TRAILERS</a>
-//       </div>
-//     </div>
-//   </div>
-// </div>
