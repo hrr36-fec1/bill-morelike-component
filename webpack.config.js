@@ -1,5 +1,3 @@
-
-
 module.exports = {
   entry: './client/App.jsx',
   module: {
