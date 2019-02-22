@@ -11,10 +11,25 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // define location of static files
 app.use(express.static('public'));
 
+// app.use(function(req, res, next) {
+//   res.header("Access-Control-Allow-Origin", "*");
+//   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+//   next();
+// });
+
 app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
+  // allow CORS
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With');
+
+  //intercepts OPTIONS method
+  if ('OPTIONS' === req.method) {
+    res.sendStatus(200);
+  }
+  else {
+    next();
+  }
 });
 
 app.get('/', function(req, res) {
