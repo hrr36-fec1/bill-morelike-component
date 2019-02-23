@@ -4,7 +4,7 @@
   "description": "Mimics the More Like <movie name> component on a Metacritic movie page to allow a user to choose a trailer video to watch.",
   "main": "App.js",
   "scripts": {
-    "start": "nodemon server/server.js",
+    "start": "node server/server.js",
     "wp-dev": "webpack -d --watch",
     "build": "webpack --mode production",
     "db:setup": "node utils/seed.js",
