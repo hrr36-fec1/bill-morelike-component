@@ -43,7 +43,7 @@ app.get('/api/movies/:movie_slug/trailers', (req, res) => {
     .then(data => res.json(data));
 });
 
-const PORT = 3333;
+const PORT = 8081;
 
 app.listen(PORT, function() {
   console.log(`listening on port ${PORT}`);
